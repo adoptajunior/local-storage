@@ -1,12 +1,14 @@
-localStorage.setItem('user', JSON.stringify({
+/* localStorage.setItem('user', JSON.stringify({
 
 }
 ))
 
+*/
+
 const yourName = document.getElementById('name');
 const yourEmail = document.getElementById('email');
 const yourText = document.getElementById('text');
-const submitbtn = document.getElementById('submit');
+const submitbtn = document.getElementById('submitbtn');
 
 submitbtn.addEventListener('click', onSubmit);
 
