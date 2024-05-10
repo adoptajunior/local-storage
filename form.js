@@ -5,16 +5,16 @@
 
 */
 
-const yourName = document.getElementById('name');
-const yourEmail = document.getElementById('email');
-const yourText = document.getElementById('text');
+const yourName = document.getElementById('userName');
+const yourEmail = document.getElementById('userEmail');
+const yourText = document.getElementById('userText');
 const submitbtn = document.getElementById('submitbtn');
+const form = document.querySelector('form');
 
-submitbtn.addEventListener('click', onSubmit);
 
 function onSubmit(event) {
     event.preventDefault();
-    console.log('hola');
+    // console.log('hola');
 
 
     const nameValue = yourName.value;
@@ -23,7 +23,13 @@ function onSubmit(event) {
 
     // console.log(firstNameValue);
 
-    localStorage.setItem('name', nameValue);
-    localStorage.setItem('email', emailValue);
-    localStorage.setItem('text', textValue);
+    localStorage.setItem('userName', nameValue);
+    localStorage.setItem('userEmail', emailValue);
+    localStorage.setItem('userText', textValue);
 }
+
+submitbtn.addEventListener('click', onSubmit);
+
+const data = JSON.parse(localStorage.getItem('userName'));
+
+// form
